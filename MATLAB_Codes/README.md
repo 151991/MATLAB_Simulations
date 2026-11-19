@@ -1,40 +1,34 @@
 
-# MATLAB Simulations – Example 1
+# MATLAB Simulations
 
 ## Overview
 
-This repository contains MATLAB implementations of the numerical simulations presented in Example 1 of a research paper on finite-time stabilization of delayed neural networks.
+This folder contains MATLAB implementations of the numerical simulations presented in the research paper:
 
-The example considers a two-dimensional delayed neural network with constant time delay.
+L. Wang, Y. Shen, and Z. Ding, "Finite time stabilization of delayed neural networks," Neural Networks, vol. 70, pp. 74–80, 2015.
 
-## System Parameters
+The MATLAB codes are organized according to the numerical examples in the paper.
 
-- D = diag(1,1)
-- A = [2, -0.1; -5, 4.5]
-- B = [-1.5, -0.1; -0.2, -4]
-- Time delay: tau = 1
-- Activation functions: tanh(x)
-- Initial history: x1(s) = -1.6, x2(s) = 1.2
+## Numerical Examples
 
-## MATLAB Programs
+### Example 1
 
-### 1. ex1.m – Original System Without Control
+Contains three MATLAB programs illustrating the delayed neural network without control and under two finite-time controllers.
 
-Simulation of the original delayed neural network without control.
+- `ex1.m`: Original system without control.
+- `ex11.m`: Controller (30), based on Corollary 2.
+- `ex111.m`: Switched controller (24), based on Theorem 4.
 
-Corresponding figure: Fig. 1.
+See the [Example 1 folder](Example_1/).
 
-### 2. ex11.m – Controller (30)
+### Example 2
 
-Finite-time stabilization using controller (30), according to Corollary 2.
+Contains MATLAB programs implementing the numerical simulations presented in Example 2.
 
-Corresponding figure: Fig. 2.
+- `ex2.m`
+- `ex22.m`
 
-### 3. ex111.m – Switched Controller (24)
-
-Finite-time stabilization using the switched controller (24), according to Theorem 4.
-
-Corresponding figure: Fig. 3.
+See the [Example 2 folder](Example_2/).
 
 ## Numerical Method
 
@@ -42,4 +36,4 @@ The delay differential equations are solved using MATLAB's `dde23` solver.
 
 ## Purpose
 
-The programs illustrate the numerical behavior of the delayed neural network under the three simulation cases presented in Example 1.
+This repository provides numerical implementations to reproduce and examine the simulation results presented in the paper.
